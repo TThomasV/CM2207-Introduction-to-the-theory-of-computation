@@ -1,7 +1,7 @@
 # CM2207: Introduction to the theory of computation
 Code used during the CM2207 to represent a DFA and carry out basic DFA operations to complete coursework exercises
 
-## Encoding format:
+#### Encoding format:
 - Line 1 specifies the number of states.
 - Line 2 specifies the states (i.e.,just a list of the names of the states, separated by spaces).
 - Line 3 specifies the size of the alphabet.
@@ -12,7 +12,7 @@ line 2) and each column corresponding to a symbol from the alphabet (in order sp
 - Line (7 + number of states) specifies the number of final/accept states.
 - Line (8 + number of states) specifies the final states.
 
-## Usage guide:
+#### Usage guide:
 - Task1.py: Prints out the complement of a DFA given as an argument from a file
 - Task2.py: Prints out a DFA that is the intersection of two DFA inputs
 - Task3.py: Prints out a DFA that is the symmetric difference of two DFA inputs
