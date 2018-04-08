@@ -1,5 +1,5 @@
-# CM2207-Introduction-to-the-theory-of-computation
-Code to represent a DFA via a text file encoding and does some basic DFA operations
+# CM2207: Introduction to the theory of computation
+Code used during the CM2207 to represent a DFA and carry out basic DFA operations to complete coursework exercises
 
 ## Encoding format:
 - Line 1 specifies the number of states.
@@ -11,3 +11,10 @@ line 2) and each column corresponding to a symbol from the alphabet (in order sp
 - Line (6 + number of states) specifies the start state.
 - Line (7 + number of states) specifies the number of final/accept states.
 - Line (8 + number of states) specifies the final states.
+
+## Usage guide:
+- Task1.py: Prints out the complement of a DFA given as an argument from a file
+- Task2.py: Prints out a DFA that is the intersection of two DFA inputs
+- Task3.py: Prints out a DFA that is the symmetric difference of two DFA inputs
+- Task4.py: Prints out whether or not the language of an input DFA from the cmdline is empty, if not the first accepted string aswell
+- Task5.py: Prints out whether or not two input DFA (from the cmdline via files) are equivalent or not
