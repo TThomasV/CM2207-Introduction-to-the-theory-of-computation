@@ -2,9 +2,9 @@
 x y z
 2
 a b
-z y
-z z
 y z
+z y
+y x
 x
 2
-x y
+x z

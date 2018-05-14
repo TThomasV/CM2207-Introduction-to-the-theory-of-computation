@@ -1,0 +1,11 @@
+4
+x y z w
+2
+a b
+y x
+z y
+z z
+x y
+x
+1
+w
