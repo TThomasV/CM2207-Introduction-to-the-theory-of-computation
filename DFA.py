@@ -89,7 +89,7 @@ class DFA(object):
 
         # Implementation of depth first search with path tracing
         # Reference: https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
-        # Modified to work with DFA's
+        # Modified to work with DFA's and work slightly more efficient
         # Used to search for a path from start state to an accept state
         def dfs_paths():
             stack = [(self.startState, [self.startState])]
@@ -239,7 +239,7 @@ def symmetricDifference(DFA_S, DFA_T):
 
         # Print redirection
         orig_stdout = sys.stdout # Save current stdout
-        filename = str(x)+'.dfa'
+        filename = str(x)+'.txt'
         f = open(filename, 'w') # New stdout location
         sys.stdout = f
 
@@ -266,7 +266,7 @@ def symmetricDifference(DFA_S, DFA_T):
 
     # Remove Temporary files
     for x in ["DFA_SC", "DFA_TC", "DFA_SCTI", "DFA_STCI"]:
-        os.remove(x+".dfa")
+        os.remove(x+".txt")
 
 # Check if equivalent to another DFA
 def isEquivalent(DFA_S, DFA_T):
@@ -280,7 +280,7 @@ def isEquivalent(DFA_S, DFA_T):
 
     # Begin std out redirect
     # File where to write the symmetric difference of DFA_S & DFA_T
-    f = open("DFA_S+DFA_T-SymmetricDifference.dfa", 'w')
+    f = open("DFA_S+DFA_T-SymmetricDifference.txt", 'w')
     orig_stdout = sys.stdout # Save current stdout
     sys.stdout = f # redirect to file
 
@@ -290,12 +290,12 @@ def isEquivalent(DFA_S, DFA_T):
     sys.stdout = orig_stdout # Restore std out
     f.close() # Close the file
 
-    if(DFA("DFA_S+DFA_T-SymmetricDifference.dfa").isEmptyLanguage() == True):
+    if(DFA("DFA_S+DFA_T-SymmetricDifference.txt").isEmptyLanguage() == True):
         retVal = True
     else:
         retVal = False
 
-    os.remove("DFA_S+DFA_T-SymmetricDifference.dfa")
+    os.remove("DFA_S+DFA_T-SymmetricDifference.txt")
 
     return retVal
 
