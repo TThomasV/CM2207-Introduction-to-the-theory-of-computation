@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-class DFA(object):
+class 
+(object):
     """Class that represents a DFA"""
 
     #### Instance Methods ####
@@ -239,7 +240,7 @@ def symmetricDifference(DFA_S, DFA_T):
 
         # Print redirection
         orig_stdout = sys.stdout # Save current stdout
-        filename = str(x)+'.txt'
+        filename = str(x)+'.dfa'
         f = open(filename, 'w') # New stdout location
         sys.stdout = f
 
@@ -266,7 +267,7 @@ def symmetricDifference(DFA_S, DFA_T):
 
     # Remove Temporary files
     for x in ["DFA_SC", "DFA_TC", "DFA_SCTI", "DFA_STCI"]:
-        os.remove(x+".txt")
+        os.remove(x+".dfa")
 
 # Check if equivalent to another DFA
 def isEquivalent(DFA_S, DFA_T):
@@ -280,7 +281,7 @@ def isEquivalent(DFA_S, DFA_T):
 
     # Begin std out redirect
     # File where to write the symmetric difference of DFA_S & DFA_T
-    f = open("DFA_S+DFA_T-SymmetricDifference.txt", 'w')
+    f = open("DFA_S+DFA_T-SymmetricDifference.dfa", 'w')
     orig_stdout = sys.stdout # Save current stdout
     sys.stdout = f # redirect to file
 
@@ -290,12 +291,12 @@ def isEquivalent(DFA_S, DFA_T):
     sys.stdout = orig_stdout # Restore std out
     f.close() # Close the file
 
-    if(DFA("DFA_S+DFA_T-SymmetricDifference.txt").isEmptyLanguage() == True):
+    if(DFA("DFA_S+DFA_T-SymmetricDifference.dfa").isEmptyLanguage() == True):
         retVal = True
     else:
         retVal = False
 
-    os.remove("DFA_S+DFA_T-SymmetricDifference.txt")
+    os.remove("DFA_S+DFA_T-SymmetricDifference.dfa")
 
     return retVal
 
