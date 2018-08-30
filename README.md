@@ -1,6 +1,6 @@
 # CM2207: Introduction to the theory of computation
 Code used during the CM2207 to represent a DFA and carry out basic DFA operations to complete coursework exercises
-###WARNING: DOES SOME WEIRD THINGS ON MACOS
+### WARNING: DOES SOME WEIRD THINGS ON MACOS
 
 
 #### Encoding format:
